@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+}
+
+#welcome {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome h1 {
+  font-size: 3em;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  z-index: 1000;
+  border: 2px solid #333;
+  padding: 20px 1px;
+  background-color: #333;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 0px;
+  width:auto;
+  margin: 0 auto;
+}
+
+nav.short {
+  margin: 0 auto;
+  
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  position: relative;
+  font-size: 2vw;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+section {
+  padding: 5vw 9vw;
+}
+
+#about {
+  margin-top: 250px;
+}
+
+#projects {
+
+}
+
+#contact {
+}
+
+.container {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 1vw;
+}
+
+/* Project box styles */
+.projects-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Make the boxes closer */
+  gap: 1.5vw; /* Reduce the gap between the project boxes */
+}
+
+.about-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack the boxes vertically */
+  align-items: flex-end;
+  justify-content: space-between; /* Align the items to the top */
+  gap: 1.5vw; /* Space between the boxes */
+}
+
+.project-box {
+  width: 30%; /* Each box takes 30% of the container width */
+  background-color: #f7f7f7;
+  border-radius: 1vw;
+  text-align: center;
+  padding: 1vw 9%;
+  transition: transform 0.3s ease, outline 0.3s ease; /* Smooth scaling and shadow transition */
+}
+
+.about-box, .about-boxC {
+  width: 95%; /* Each box takes 30% of the container width */
+  background-color: #f7f7f7;
+  border-radius: 1vw;
+  text-align: center;
+  transition: transform 0.3s ease, outline 0.3s ease; /* Smooth scaling and shadow transition */
+}
+
+.project-box, .about-boxC {
+    outline: 2px solid rgb(0, 0, 0);
+    background-color: #8a8080;
+
+}
+
+.about-image {
+  width: 30%; /* Adjust the width of the image */
+  background-size: cover; /* Ensure the image fills the div */
+  background-position: center;
+  float: left;
+}
+
+img {
+    width: 100%; /* Resizes the image to fit the width of its container */
+    height: auto; /* Maintains the aspect ratio of the image */
+}
+
+h1 {
+    font-size: 3vw;
+}
+p {
+    font-size: 1.5vw;
+}
+h2 {
+    font-size: 1.6vw;
+
+}
+
+.project-box:hover, .about-boxC:hover {
+  transform: scale(1.04); /* Slightly scale up on hover */
+  outline: 2px solid rgba(52, 152, 219, 1);
+}
+  </style>
+</head>
+<body>
+  <section id="welcome">
+    <h1>Hi, I'm Raykeju</h1>
+  </section>
+
+  <nav id="navbar" class="short">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="#award">Award</a>
+  </nav>
+
+  <section id="about">
+    <div class="container">
+      <h1>Meet With Me</h1>
+      <div class="about-image">
+        <img src="wangen.png" alt="A beautiful photo" />
+    </div>
+      <div class="about-wrapper">
+        <!-- name -->
+        <div class="about-box">
+            <h1>RAYKE SCHANEU</h1>
+            <p>i graduate from nasi peudang university in french</p>
+            <p>i do code game drawing and making music</p>
+        </div>
+        
+        <!-- social -->
+        <div class="about-boxC">
+            <h2>TWITTER/X</h2>
+        </div>
+        <div class="about-boxC">
+            <h2>AKUN ID FF</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h1>Projects</h1>
+      <p>These are some of my projects. I will add more here soon!</p>
+      
+      <div class="projects-wrapper">
+        <!-- Project 1 -->
+        <div class="project-box">
+          <h2>Project 1</h2>
+          <p>Description of project 1.</p>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-box">
+          <h2>Project 2</h2>
+          <p>Description of project 2.</p>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-box">
+          <h2>Project 3</h2>
+          <p>Description of project 3.</p>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-box">
+            <h2>Project 5</h2>
+            <p>Description of project 3.</p>
+          </div>
+
+        <!-- Project 3 -->
+        <div class="project-box">
+            <h2>Project 6</h2>
+            <p>Description of project 3.</p>
+          </div>
+        
+        <!-- Project 3 -->
+        <div class="project-box">
+            <h2>Project 55</h2>
+            <p>Description of project 3.</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h1>Contact</h1>
+      <p>This is the contact section of the portfolio.</p>
+    </div>
+  </section>
+
+  <section id="award">
+    <div class="container">
+      <h1>Contact</h1>
+      <p>im a 10 time winner of dap up tournament</p>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > document.getElementById('welcome').offsetHeight) {
+          navbar.classList.remove('short');
+        } else {
+          navbar.classList.add('short');
+        }
+      });
+
+      document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
